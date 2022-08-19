@@ -16,11 +16,11 @@ public class MovieLibrary {
     }
 
     public void setMovies(ArrayList<Movie> movies) {
-        this.movies = movies;
+        MovieLibrary.movies = movies;
     }
 
     public MovieLibrary(ArrayList<Movie> movies) {
-        this.movies = movies;
+        MovieLibrary.movies = movies;
     }
 
     @Override
