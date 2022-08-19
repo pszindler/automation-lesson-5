@@ -20,13 +20,13 @@ public class MovieLibrary {
         return "" + movies;
     }
 
-    private static void printMovieTitle (List<Movie> movies) {
-        for (Movie movie: movies) {
+    private static void printMovieTitle(List<Movie> movies) {
+        for (Movie movie : movies) {
             System.out.println(movie.getTitle());
         }
     }
 
-    public static void getMoviesFromXToY (int fromDate, int toDate) {
+    public static void getMoviesFromXToY(int fromDate, int toDate) {
         ArrayList<Movie> filteredMovies = MovieLibrary.getMovies();
         filteredMovies = ((ArrayList<Movie>) filteredMovies.stream()
                 .filter(movie -> movie.getDate() >= fromDate
@@ -39,7 +39,7 @@ public class MovieLibrary {
         }
     }
 
-    public static void getRandomMovieInfo () {
+    public static void getRandomMovieInfo() {
         Random random = new Random();
         ArrayList<Movie> filteredMovies = MovieLibrary.getMovies();
         int moviesLength = filteredMovies.size();
@@ -47,7 +47,7 @@ public class MovieLibrary {
         System.out.println(filteredMovies.get(randomMovie));
     }
 
-    public static void getMoviesByActor (String firstName, String lastName) {
+    public static void getMoviesByActor(String firstName, String lastName) {
         ArrayList<Movie> filteredMovies = MovieLibrary.getMovies();
         Predicate<Movie> filterByNameAndLastName =
                 d -> d.getActors().stream()

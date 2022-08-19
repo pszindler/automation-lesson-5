@@ -7,14 +7,6 @@ public class Movie {
     private Director director;
     private ArrayList<Actor> actors;
 
-    public Movie(String title, String genre, int date, Director director, ArrayList<Actor> actors) {
-        this.title = title;
-        this.genre = genre;
-        this.date = date;
-        this.director = director;
-        this.actors = actors;
-    }
-
     public Movie() {
     }
 
@@ -46,5 +38,6 @@ public class Movie {
                 "date: " + date + "\n" +
                 "actors: " + actors.toString().replace("[", "").replace("]", "");
     }
+
 
 }
