@@ -22,40 +22,20 @@ public class Movie {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public String getGenre() {
         return genre;
-    }
-
-    public void setGenre(String genre) {
-        this.genre = genre;
     }
 
     public int getDate() {
         return date;
     }
 
-    public void setDate(int date) {
-        this.date = date;
-    }
-
     public Director getDirector() {
         return director;
     }
 
-    public void setDirector(Director director) {
-        this.director = director;
-    }
-
     public ArrayList<Actor> getActors() {
         return actors;
-    }
-
-    public void setActors(ArrayList<Actor> actors) {
-        this.actors = actors;
     }
 
     @Override

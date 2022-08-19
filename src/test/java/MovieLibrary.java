@@ -7,19 +7,11 @@ import java.util.stream.Collectors;
 public class MovieLibrary {
     private static ArrayList<Movie> movies;
 
-    public MovieLibrary() {
-        List<Movie> movies = new ArrayList<>();
-    }
-
     public static ArrayList<Movie> getMovies() {
         return movies;
     }
 
     public void setMovies(ArrayList<Movie> movies) {
-        MovieLibrary.movies = movies;
-    }
-
-    public MovieLibrary(ArrayList<Movie> movies) {
         MovieLibrary.movies = movies;
     }
 
