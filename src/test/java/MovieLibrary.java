@@ -20,7 +20,7 @@ public class MovieLibrary {
         return "" + movies;
     }
 
-    private static void printMovieTitle(List<Movie> movies) {
+    private void printMovieTitle(List<Movie> movies) {
         for (Movie movie : movies) {
             System.out.println(movie.getTitle());
         }
