@@ -5,14 +5,14 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class MovieLibrary {
-    private static ArrayList<Movie> movies;
+    private ArrayList<Movie> movies;
 
-    public static ArrayList<Movie> getMovies() {
+    public ArrayList<Movie> getMovies() {
         return movies;
     }
 
     public void setMovies(ArrayList<Movie> movies) {
-        MovieLibrary.movies = movies;
+        this.movies = movies;
     }
 
     @Override
@@ -26,8 +26,8 @@ public class MovieLibrary {
         }
     }
 
-    public static void getMoviesFromXToY(int fromDate, int toDate) {
-        ArrayList<Movie> filteredMovies = MovieLibrary.getMovies();
+    public void getMoviesFromXToY(int fromDate, int toDate) {
+        ArrayList<Movie> filteredMovies = getMovies();
         filteredMovies = ((ArrayList<Movie>) filteredMovies.stream()
                 .filter(movie -> movie.getDate() >= fromDate
                         && movie.getDate() <= toDate)
@@ -39,16 +39,16 @@ public class MovieLibrary {
         }
     }
 
-    public static void getRandomMovieInfo() {
+    public void getRandomMovieInfo() {
         Random random = new Random();
-        ArrayList<Movie> filteredMovies = MovieLibrary.getMovies();
+        ArrayList<Movie> filteredMovies = getMovies();
         int moviesLength = filteredMovies.size();
         int randomMovie = random.nextInt(moviesLength);
         System.out.println(filteredMovies.get(randomMovie));
     }
 
-    public static void getMoviesByActor(String firstName, String lastName) {
-        ArrayList<Movie> filteredMovies = MovieLibrary.getMovies();
+    public void getMoviesByActor(String firstName, String lastName) {
+        ArrayList<Movie> filteredMovies = getMovies();
         Predicate<Movie> filterByNameAndLastName =
                 d -> d.getActors().stream()
                         .anyMatch(a -> a.firstName().equals(firstName)
